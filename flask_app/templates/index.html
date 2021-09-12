@@ -10,21 +10,21 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
   </head>
-  <body>
+  <body style="background-color: black">
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center" style="background-color: brown; color: white">
         <h1>Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button" style="background-color: black; border: none; color: white;">Scrape New Data</a></p>
       </div>
       <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
         <div class="col-md-12">
           <div class="media">
-            <div class="media-body">
+            <div class="media-body" style="color: white">
               <h2>Latest Mars News</h2>
-              <h4 class="media-heading">{{ mars.news_title }}</h4>
+              <h4 class="media-heading" style="color: white">{{ mars.news_title }}</h4>
               <p>{{ mars.news_paragraph }}</p>
             </div>
           </div>
@@ -32,7 +32,7 @@
       </div>
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
-        <div class="col-md-8">
+        <div class="col-md-8" style="color: white">
           <h2>Featured Mars Image</h2>
           <img
             src="{{mars.featured_image }}"
@@ -42,7 +42,7 @@
         </div>
         <div class="col-md-4">
           <!-- Mars Facts -->
-          <div class="row" id="mars-facts">
+          <div class="row" id="mars-facts" style="color: white">
             <h4>Mars Facts</h4>
             {{ mars.facts | safe }}
           </div>
@@ -50,11 +50,11 @@
       </div>
       <!-- Section for Hemispheres -->
       <div>
-        <div class="col-md-12">
+        <div class="col-md-12" style="color: white">
           <h2><center>Mars Hemispheres</center></h2>
           {% for hemisphere in mars.hemispheres %}
             <div class="col-md-6">
-             <div class = "thumbnail">
+             <div class = "thumbnail" style="color: black">
                 <img src="{{hemisphere.image_url}}">
                   <h3><b>{{hemisphere.title}}</b></h3>
               </div>
